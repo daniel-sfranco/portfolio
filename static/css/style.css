@@ -42,7 +42,7 @@ p {
 
 a {
     text-decoration: none;
-    color: #81dbb8;
+    color: #bbf0db;
 }
 
 a:hover {
@@ -53,4 +53,20 @@ a:hover {
     display: block;
     width: 100%;
     max-width: 800px;
+}
+
+.logout {
+    display: inline-block;
+}
+
+.logout-button {
+    font-size: 1rem;
+    background-color: #44B78B;
+    text-decoration: none;
+    color: #bbf0db;
+    border: none;
+}
+
+.logout-button:hover {
+    opacity:.85;
 }
