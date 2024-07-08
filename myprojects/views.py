@@ -21,6 +21,12 @@ def project_new(request):
         if form.is_valid():
             newproject = form.save(commit=False)
             newproject.author = request.user
+            new_slug = request.POST['title'].lower()
+            new_slug = new_slug.replace(' ', '-')
+            newproject.slug = new_slug
+            body_words = request.POST['body'].split()
+            if len(request.POST['body']) > 100:
+                newproject.preview = ' '.join(body_words[0:20]) + '...'
             newproject.save()
             return redirect('myprojects:list')
     else:

@@ -1,12 +1,12 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-    Projects
+    Projetos
 {% endblock %}
 
 {% block content %}
 <section>
-    <h1>Projects</h1>
+    <h1>Projetos</h1>
 
     {% for project in projects %}
         <article class='project'>
@@ -15,8 +15,8 @@
                     {{project.title}}
                 </a>
             </h2>
-            <p>{{project.date}} by {{ project.author }}</p>
-            <p>{{project.body}}</p>
+            <p>{{project.date}}</p>
+            <p>{{project.preview}}</p>
         </article>
     {% endfor %}
 </section>
