@@ -21,7 +21,7 @@
             <a href="{% url 'posts:new-post' %}" title="New Post">new post</a> |
             <form class="logout" action="{% url 'users:logout' %}" method='post'>
                 {% csrf_token %}
-                <button class='logout-button' title='User logout'>Logout</button>
+                <button class='logout-button' title='User logout'>logout</button>
             </form>
         {% else %}
             <a href="{% url 'users:register' %}" title="User Registration">register</a> |
