@@ -7,7 +7,7 @@ def register_view(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             login(request, form.save())
-            return redirect('posts:list')
+            return redirect('myprojects:list')
     else:
         form = UserCreationForm()
     return render(request, 'users/register.html', {"form": form})
@@ -19,7 +19,7 @@ def login_view(request):
             login(request, form.get_user())
             if 'next' in request.POST:
                 return redirect(request.POST.get('next'))
-            return redirect('posts:list')
+            return redirect('myprojects:list')
         else:
             return redirect("users:login")
     else:
@@ -29,4 +29,4 @@ def login_view(request):
 def logout_view(request):
     if request.method == 'POST':
         logout(request)
-        return redirect('posts:list')
+        return redirect('myprojects:list')
