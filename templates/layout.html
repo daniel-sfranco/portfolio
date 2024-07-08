@@ -10,7 +10,11 @@
         {% endblock %}
     </title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="{% static 'js/main.js' %}" defer></script>
+    <script src="https://kit.fontawesome.com/5a20b600e8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav>
@@ -31,5 +35,12 @@
         {% block content %}
         {% endblock %}
     </main>
+    <footer>
+        <h2 class='social-media'>Redes: </h2>
+        <a href="https://api.whatsapp.com/send?phone=5519971029833" class='social-media'><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/dani_sfranco/?igsh=NmIyeDhzb252dXh4" class='social-media'><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/daniel-soares-franco/" class='social-media'><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/daniel-sfranco" class='social-media'><i class="fa-brands fa-github"></i></a>
+    </footer>
 </body>
 </html>
